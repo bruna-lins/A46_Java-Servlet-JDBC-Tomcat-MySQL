@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Courgette&family=M+PLUS+1:wght@200&family=Montserrat:wght@200;300&family=Nunito:ital,wght@0,200;0,500;0,600;0,700;1,300&family=Poppins:wght@200&family=Satisfy&display=swap');
+
+/* Variáveis */
+:root {
+  --color-primary: #403f3f;
+  --color-secondary: #427a5b !important;
+  --color-bg-btn: #b4cd93;
+  --color-white: #eeeeee;
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Satisfy', cursive;
+}
+
+*{
+  font-family: var(--font-primary);
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; 
+  border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+html{
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+body { 
+	height: 120vh;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1em;
+  background:var(--color-secondary);
+  color:var(--color-white);
+  padding:.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.btn:hover{
+  background:var(--color-bg-btn);
+  color:var(--color-secondary);
+}
+
+.main-title { 
+	margin-top: 3rem;
+}
+
+.main-title .title-secondary{
+  font-size: 5rem;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+  position: relative;
+  text-align: center;
+}
+
+.main-title .title-primary {
+  font-size: 2rem;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Header */ 
+
+header{
+  position: relative;
+  top:0; 
+  left: 0; 
+  right:0;
+  background:var(--color-primary);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1rem 9%;
+}
+
+header .logo{
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color:var(--color-white);
+  text-transform: uppercase;
+}
+
+header .logo span{
+  font-family: var(--font-secondary);
+  color:var(--color-secondary);
+}
+
+header .navbar a{
+  color:var(--color-white);
+  font-size: 1.5rem;
+  margin:0 .5rem;
+}
+
+header .navbar a:hover{
+  color:var(--color-secondary);
+}
+
+header .icons i{
+  font-size: 2.5rem;
+  color:var(--color-white);
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover{
+  color:var(--color-secondary);
+}
+
+header .search-bar-container{
+  position: absolute;
+  top:100%; left: 0; right:0;
+  padding:1.5rem 2rem;
+  background:#333;
+  border-top: .1rem solid var(--color-bg-btn);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar{
+  width:100%;
+  padding:1rem;
+  text-transform: none;
+  color:#333;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+
+header .search-bar-container label{
+  color:var(--color-white);
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+  color:var(--color-secondary);
+}
+
+#menu-bar{
+  color:var(--color-white);
+  border:.1rem solid var(--color-white);
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding:.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Form */
+
+.dest {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+} 
+
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+
+
+.input {
+	width: 320px;
+	padding: 5px;
+	margin-bottom: 8px;
+	border: 1px solid var(--color-secondary);
+	border-radius: 5px;
+}
+
+
+#tabela {
+	margin: auto;
+	margin-top: 2rem;
+	border-collapse: collapse;
+}
+
+#tabela th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+
+#tabela td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.btn-delete {
+	text-decoration: none;
+	background-color: #d51213;
+	padding: 5px 10px 5px 10px;
+	color: var(--color-white);
+	font-size: 1em;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 0;
+}
+
+.btn-delete:hover{
+  background:#e15959;
+}
+
+.btn-edit {
+	text-decoration: none;
+	background-color: var(--color-secondary);
+	padding: 5px 10px 5px 10px;
+	color: var(--color-white);
+	font-size: 1em;
+	font-weight: 700;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 0;
+}
+
+.btn-edit:hover{
+  background: var(--color-bg-btn);
+}
+
+#input_id {
+	padding: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ff0000;
+}
+
